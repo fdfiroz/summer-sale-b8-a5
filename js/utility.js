@@ -13,20 +13,22 @@ function setOutput(id, value){
 
 const reset = function(){
     const itemsCountSet = document.getElementById("itemsCountSet");
-    itemsCountSet.innerHTML = "";
     const total = document.getElementById("total");
-    total.innerText = 0;
     const grandTotal = document.getElementById("grand-total");
     const discount = document.getElementById("myCupon");
+    const modal = document.getElementById("my_modal_5");
+    
+    itemsCountSet.innerHTML = "";
+    total.innerText = 0;
     discount.innerText = 0;
     grandTotal.innerText = 0;
-    const modal = document.getElementById("my_modal_5");
+    applyBtn.disabled = true
+    const purchaseBtn = document.getElementById("purchaseBtn");
+    purchaseBtn.disabled = true
     modal.showModal()
 }
 const myCupon = function(){
     const total = document.getElementById("total");
-    const grandTotal = document.getElementById("grand-total");
-    const discount = document.getElementById("myCupon");
     const applyBtn = document.getElementById("applyBtn");
     const cuponImput = document.getElementById("cuponImput");
     const cupon = cuponImput.value;
