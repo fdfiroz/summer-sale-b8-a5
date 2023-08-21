@@ -199,7 +199,7 @@
                 <h2 class="text-neutral-900 text-2xl font-medium">Have coupon?</h2>
                 <!-- <input type="text" placeholder="Coupon code"><input type="button" value="Apply" class="btn" /> -->
                 <div class="flex items-center gap-2">
-                    <input id="cuponImput" type="text" class="inline-block input input-bordered w-36"
+                    <input id="cuponInput" type="text" class="inline-block input input-bordered w-36"
                         placeholder="Coupon code">
                     <button id="applyBtn" disabled class="btn bg-pink-500 text-white">Apply</button>
                 </div>
@@ -215,7 +215,7 @@
                         class="text-neutral-900 text-opacity-50 text-2xl font-medium">0</span>TK</p>
                 <p class="text-neutral-900 text-2xl font-medium">Total: <span id="grand-total"
                         class="text-neutral-900 text-opacity-50 text-2xl font-medium">0</span>TK</p>
-                <button id="purchaseBtn" class="btn bg-pink-500 text-white" disabled>Make Purchase</button>
+                <button id="purchaseBtn" class="btn bg-pink-500 text-white" disabled onclick="my_modal_5.showModal()">Make Purchase</button>
                 <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                     <form method="dialog" class="modal-box flex flex-col justify-center items-center gap-4">
                         <figure class="">
@@ -224,7 +224,7 @@
                         <h1 class="text-neutral-900 text-5xl font-bold">Congratulations</h1>
                         <p class="text-neutral-900 text-opacity-50 text-xl font-normal">Your Purchase the product</p>                        <div class="modal-action">
                             <!-- if there is a button in form, it will close the modal -->
-                            <button class="btn bg-pink-500 text-white">Go Home</button>
+                            <button class="btn bg-pink-500 text-white" id="reset-page">Go Home</button>
                         </div>
                     </form>
                 </dialog>

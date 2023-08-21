@@ -11,34 +11,20 @@ function setOutput(id, value){
     output.innerText = value;
   }
 
-const reset = function(){
-    const itemsCountSet = document.getElementById("itemsCountSet");
-    const total = document.getElementById("total");
-    const grandTotal = document.getElementById("grand-total");
-    const discount = document.getElementById("myCupon");
-    const modal = document.getElementById("my_modal_5");
-    
-    itemsCountSet.innerHTML = "";
-    total.innerText = 0;
-    discount.innerText = 0;
-    grandTotal.innerText = 0;
-    applyBtn.disabled = true
-    const purchaseBtn = document.getElementById("purchaseBtn");
-    purchaseBtn.disabled = true
-    modal.showModal()
-}
+
 const myCupon = function(){
     const total = document.getElementById("total");
     const applyBtn = document.getElementById("applyBtn");
-    const cuponImput = document.getElementById("cuponImput");
-    const cupon = cuponImput.value;
-    if(cupon == "SELL200"){
+    const cuponInput = document.getElementById("cuponInput");
+    const cupon = cuponInput.value;
+
+    if(cupon === "SELL200"){
         // 20% discount and show discount valu and grand total and hide disable button
         const discountValue = parseFloat(total.innerText) * 0.2;
         const grandTotalValue = parseFloat(total.innerText) - discountValue;
         setOutput("myCupon", discountValue.toFixed(2));
         setOutput("grand-total", grandTotalValue.toFixed(2));
-        cuponImput.value = "";
+        cuponInput.value = "";
         applyBtn.disabled = true;
     }else{      
         // show error message and hide disable button
